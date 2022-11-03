@@ -1,0 +1,145 @@
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.AssemblyInfo.cs
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.RazorAssemblyInfo.cache
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.RazorAssemblyInfo.cs
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\RedSocial.exe
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\RedSocial.deps.json
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\RedSocial.runtimeconfig.json
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\RedSocial.runtimeconfig.dev.json
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\RedSocial.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\RedSocial.pdb
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\RedSocial.Views.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\RedSocial.Views.pdb
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\staticwebassets\RedSocial.StaticWebAssets.Manifest.cache
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\staticwebassets\RedSocial.StaticWebAssets.xml
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\scopedcss\bundle\RedSocial.styles.css
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.TagHelpers.input.cache
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.TagHelpers.output.cache
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.RazorCoreGenerate.cache
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.RazorTargetAssemblyInfo.cache
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.RazorTargetAssemblyInfo.cs
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.Views.pdb
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.csproj.CopyComplete
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.dll
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.pdb
+C:\Users\USER\Desktop\ORT\Materias\Programacion en nuevas tecnologias 1\Proyecto-RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.genruntimeconfig.cache
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\RedSocial.exe
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\RedSocial.deps.json
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\RedSocial.runtimeconfig.json
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\RedSocial.runtimeconfig.dev.json
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\RedSocial.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\RedSocial.pdb
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\RedSocial.Views.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\RedSocial.Views.pdb
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.csprojAssemblyReference.cache
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.AssemblyInfoInputs.cache
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.AssemblyInfo.cs
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.csproj.CoreCompileInputs.cache
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.MvcApplicationPartsAssemblyInfo.cache
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.RazorAssemblyInfo.cache
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.RazorAssemblyInfo.cs
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\staticwebassets\RedSocial.StaticWebAssets.Manifest.cache
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\staticwebassets\RedSocial.StaticWebAssets.xml
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\scopedcss\bundle\RedSocial.styles.css
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.TagHelpers.input.cache
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.TagHelpers.output.cache
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.RazorCoreGenerate.cache
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.RazorTargetAssemblyInfo.cache
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.RazorTargetAssemblyInfo.cs
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.Views.pdb
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.csproj.CopyComplete
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.dll
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.pdb
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.genruntimeconfig.cache

@@ -11,16 +11,25 @@ namespace RedSocial.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int PublicacionId { get; set; }
+        public int putlicationId { get; set; }
+        public DateTime fecha { get; set; }
+        public string texto { get; set; }
 
-        public DateTime Fecha { get; set; }
 
-        public string Texto { get; set; }
+        //public List<Usuario> likes;
+        //public List<Comentario> comentarios;
+        //public List<Imagen> imagenes;
 
-        public List<Imagen> imagenes;
+        public virtual ICollection<Usuario> likes { get; set; }
+        public virtual ICollection<Comentario> comentarios { get; set; }
+        public virtual ICollection<Imagen> imagenes { get; set; }
 
-        public List<int> likes;
-        
-        public List<Comentario> comentarios;
+
+        /*public Publicacion()
+        {
+            likes = new List<Usuario>();
+            comentarios = new List<Comentario>();
+            imagenes = new List<Imagen>();
+        }*/
     }
 }

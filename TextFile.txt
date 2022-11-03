@@ -1,0 +1,15 @@
+﻿1- CREAR LAS CLASES CON EL NAMESPACE [NOMBRE_CLASE].MODELS
+2- IMPORTAR LIBRERIAS ENTITY FRAMEWORK:
+	* Microsoft.EntityFrameworkCore.SqlServer
+	* Microsoft.EntityFrameworkCore.Tools
+	* Microsoft.AspNetCore.Mvc.NewtonsoftJson
+3- CREAR EL CONTEXT
+4- COMPLETAR APPSETTINGS.JSON CON EL STRING DE CONEXION
+5- COMPLETAR LA CLASE STARTUP 
+6- HERRAMIENTAS/ADMINISTRADOR DE PAQUETES NUGET/CONSOLA DE ADM
+7- GENERAR MIGRACION Add-Migration Inicial  (INICIAL ES EL NOMBRE DE LA MIGRACION PUEDE SER UNA VERSION)
+8- update-database -verbose  <- esto hace el update de la base de datos
+9- Agregar nuevo elemento con scaffold en controllers para cada clase (crea controller y views para el crud(ABM))
+10- Para agregar el enum a la pagina de add.
+
+

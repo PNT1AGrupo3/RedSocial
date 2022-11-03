@@ -11,11 +11,14 @@ namespace RedSocial.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ComentarioId { get; set; }
-
-        public string Texto { get; set; }
-
-        public Usuario usuario { get; set; }
+        public int comentarioId { get; set; }
+        public string texto { get; set; }
+        //public List<Usuario> usuarios;
+        public virtual ICollection<Usuario> usuarios { get; set; }
+        /*public Comentario()
+        {
+            usuarios = new List<Usuario>();
+        }*/
 
     }
 }

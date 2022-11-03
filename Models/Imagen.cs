@@ -11,13 +11,11 @@ namespace RedSocial.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ImagenId { get; set; }
-
-        public string FullPath { get; set; }
-
-        private string getFileName()
+        public int imagenId { get; set; }
+        public string fullPath { get; set; }
+        public string getFileName()
         {
-            return "";
+            return "ver como se conforma el full path en el web server";
         }
 
     }

@@ -16,7 +16,8 @@ namespace RedSocial.Context
         public DbSet<Publicacion> Publicaciones { get; set; }
         public DbSet<Imagen> Imagen { get; set; }
         public DbSet<Comentario> Comentario { get; set; }
-
+        
     }
+    
 
 }

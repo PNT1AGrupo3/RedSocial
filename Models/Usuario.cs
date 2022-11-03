@@ -11,18 +11,19 @@ namespace RedSocial.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int UserId { get; set; }
-
-        public string Password { get; set; }
-
-        public string Email { get; set; }
-
-        public string PreguntaSecreta { get; set; }
-
-        public string RespuestaSecreta { get; set; }
-
-        public DateTime FechaCreacion { get; set; }
-
-        public List<Publicacion> Publicaciones { get; set; }
+        public int userId { get; set; }
+        public string password { get; set; }
+        public string email { get; set; }
+        public string preguntaSecreta { get; set; }
+        public string respuestaSecreta { get; set; }
+        public DateTime fechaCreacion { get; set; }
+        //public List<Publicacion> publicaciones;
+        //public List<Usuario> amigos;
+        public virtual ICollection<Publicacion> publicaciones { get; set; }
+        public virtual ICollection<Usuario> amigos { get; set; }
+        public Usuario()
+        {
+            publicaciones = new List<Publicacion>();
+        }
     }
 }

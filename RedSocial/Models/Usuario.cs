@@ -18,6 +18,7 @@ namespace RedSocial.Models
         public string respuestaSecreta { get; set; }
         public DateTime fechaCreacion { get; set; }
         public List<Publicacion> publicaciones;
+        public List<Usuario> amigos;
         public Usuario()
         {
             publicaciones = new List<Publicacion>();

@@ -19,7 +19,9 @@ namespace RedSocial.Models
         public DateTime fechaCreacion { get; set; }
         //public List<Publicacion> publicaciones;
         //public List<Usuario> amigos;
+        [NotMapped]
         public virtual ICollection<Publicacion> publicaciones { get; set; }
+        [NotMapped]
         public virtual ICollection<Usuario> amigos { get; set; }
         public Usuario()
         {

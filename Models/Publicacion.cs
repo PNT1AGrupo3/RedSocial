@@ -19,11 +19,11 @@ namespace RedSocial.Models
         //public List<Usuario> likes;
         //public List<Comentario> comentarios;
         //public List<Imagen> imagenes;
-        [NotMapped]
-        public virtual ICollection<Usuario> likes { get; set; }
-        [NotMapped]
+        //[NotMapped]
+        //public virtual ICollection<Usuario> likes { get; set; } //circular
+        //[NotMapped]
         public virtual ICollection<Comentario> comentarios { get; set; }
-        [NotMapped]
+        //[NotMapped]
         public virtual ICollection<Imagen> imagenes { get; set; }
 
 

@@ -17,15 +17,16 @@ namespace RedSocial.Models
         public string preguntaSecreta { get; set; }
         public string respuestaSecreta { get; set; }
         public DateTime fechaCreacion { get; set; }
+
         //public List<Publicacion> publicaciones;
         //public List<Usuario> amigos;
-        [NotMapped]
+        //[NotMapped]
         public virtual ICollection<Publicacion> publicaciones { get; set; }
-        [NotMapped]
+        //[NotMapped]
         public virtual ICollection<Usuario> amigos { get; set; }
-        /*public Usuario()
-        {
-            publicaciones = new List<Publicacion>();
-        }*/
+        //public Usuario()
+        //{
+        //    publicaciones = new List<Publicacion>();
+        //}
     }
 }

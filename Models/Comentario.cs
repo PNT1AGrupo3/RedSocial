@@ -13,8 +13,9 @@ namespace RedSocial.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int comentarioId { get; set; }
         public string texto { get; set; }
+
         //public List<Usuario> usuarios;
-        [NotMapped]
+        //[NotMapped]
         public virtual ICollection<Usuario> usuarios { get; set; }
         /*public Comentario()
         {

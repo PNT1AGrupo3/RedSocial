@@ -13,7 +13,7 @@ namespace RedSocial.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int imagenId { get; set; }
         public string fullPath { get; set; }
-        public string getFileName() //buscar en cupcake
+        public string getFileName()     // aplicación de los cupcakes
         {
             return "ver como se conforma el full path en el web server";
         }

@@ -3,6 +3,7 @@
 	* Microsoft.EntityFrameworkCore.SqlServer
 	* Microsoft.EntityFrameworkCore.Tools
 	* Microsoft.AspNetCore.Mvc.NewtonsoftJson
+	* Newtonsoft.json
 3- CREAR EL CONTEXT
 4- COMPLETAR APPSETTINGS.JSON CON EL STRING DE CONEXION
 5- COMPLETAR LA CLASE STARTUP 

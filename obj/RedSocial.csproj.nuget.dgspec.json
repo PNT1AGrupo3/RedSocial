@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Miriam\\Downloads\\RedSocial-main\\RedSocial.csproj": {}
+    "D:\\Estudios\\Analista de Sistemas\\2 CUAT\\3-PNT1 - HTML\\RedSocial\\RedSocial\\RedSocial.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Miriam\\Downloads\\RedSocial-main\\RedSocial.csproj": {
+    "D:\\Estudios\\Analista de Sistemas\\2 CUAT\\3-PNT1 - HTML\\RedSocial\\RedSocial\\RedSocial.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Miriam\\Downloads\\RedSocial-main\\RedSocial.csproj",
+        "projectUniqueName": "D:\\Estudios\\Analista de Sistemas\\2 CUAT\\3-PNT1 - HTML\\RedSocial\\RedSocial\\RedSocial.csproj",
         "projectName": "RedSocial",
-        "projectPath": "C:\\Users\\Miriam\\Downloads\\RedSocial-main\\RedSocial.csproj",
-        "packagesPath": "C:\\Users\\Miriam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Miriam\\Downloads\\RedSocial-main\\obj\\",
+        "projectPath": "D:\\Estudios\\Analista de Sistemas\\2 CUAT\\3-PNT1 - HTML\\RedSocial\\RedSocial\\RedSocial.csproj",
+        "packagesPath": "C:\\Users\\Franco\\.nuget\\packages\\",
+        "outputPath": "D:\\Estudios\\Analista de Sistemas\\2 CUAT\\3-PNT1 - HTML\\RedSocial\\RedSocial\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Miriam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Franco\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,12 +68,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.13, 3.1.13]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -79,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

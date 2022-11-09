@@ -23,9 +23,9 @@ namespace RedSocial.Models
         public virtual ICollection<Publicacion> publicaciones { get; set; }
         [NotMapped]
         public virtual ICollection<Usuario> amigos { get; set; }
-        public Usuario()
+        /*public Usuario()
         {
             publicaciones = new List<Publicacion>();
-        }
+        }*/
     }
 }

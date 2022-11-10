@@ -13,12 +13,11 @@ namespace RedSocial.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int putlicationId { get; set; }
         public DateTime fecha { get; set; }
+        [DataType(DataType.Text)]
+        [Display(Name = "Descripción de la publicación")]
+        [Required(ErrorMessage = "Ingrese una descripción")]
         public string texto { get; set; }
 
-
-        //public List<Usuario> likes;
-        //public List<Comentario> comentarios;
-        //public List<Imagen> imagenes;
         [NotMapped]
         public virtual ICollection<Usuario> likes { get; set; } //circular
         //[NotMapped]

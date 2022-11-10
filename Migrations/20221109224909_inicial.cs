@@ -13,10 +13,10 @@ namespace RedSocial.Migrations
                 {
                     userId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    password = table.Column<string>(nullable: true),
-                    email = table.Column<string>(nullable: true),
-                    preguntaSecreta = table.Column<string>(nullable: true),
-                    respuestaSecreta = table.Column<string>(nullable: true),
+                    password = table.Column<string>(nullable: false),
+                    email = table.Column<string>(nullable: false),
+                    preguntaSecreta = table.Column<string>(nullable: false),
+                    respuestaSecreta = table.Column<string>(nullable: false),
                     fechaCreacion = table.Column<DateTime>(nullable: false),
                     UsuariouserId = table.Column<int>(nullable: true),
                     comentarioId = table.Column<int>(nullable: true)
@@ -39,7 +39,7 @@ namespace RedSocial.Migrations
                     putlicationId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     fecha = table.Column<DateTime>(nullable: false),
-                    texto = table.Column<string>(nullable: true),
+                    texto = table.Column<string>(nullable: false),
                     UsuariouserId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
@@ -73,7 +73,7 @@ namespace RedSocial.Migrations
                 {
                     comentarioId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    texto = table.Column<string>(nullable: true),
+                    texto = table.Column<string>(nullable: false),
                     PublicacionputlicationId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>

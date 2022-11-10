@@ -58,6 +58,7 @@ namespace RedSocial.Controllers
         {
             if (ModelState.IsValid)
             {
+                publicacion.fecha = DateTime.Now;
                 _context.Add(publicacion);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

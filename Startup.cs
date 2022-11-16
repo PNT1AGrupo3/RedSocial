@@ -13,6 +13,7 @@ using RedSocial.Context;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
+using RedSocial.Repositories;
 
 namespace RedSocial
 {
@@ -34,6 +35,7 @@ namespace RedSocial
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+            services.AddTransient<IImagenRepository, ImagenRepository>();
             services.AddDbContext<RedSocialDatabaseContext>(options =>
             options.UseSqlServer(Configuration["ConnectionString:RedSocialDBConnection"]));
             services.AddMvc().AddNewtonsoftJson(options =>

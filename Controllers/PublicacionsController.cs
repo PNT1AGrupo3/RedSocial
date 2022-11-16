@@ -1,22 +1,58 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Web;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RedSocial.Context;
 using RedSocial.Models;
+using RedSocial.Repositories;
 
 namespace RedSocial.Controllers
 {
     public class PublicacionsController : Controller
     {
         private readonly RedSocialDatabaseContext _context;
-
-        public PublicacionsController(RedSocialDatabaseContext context)
+        private IImagenRepository _repository;
+        private IWebHostEnvironment _environment;
+        public PublicacionsController(RedSocialDatabaseContext context, IWebHostEnvironment environment, IImagenRepository repository)
         {
+            _repository = repository;
+            _environment = environment;
             _context = context;
+        }
+        // GET: Imagenes de publicacion
+        public IActionResult GetImage(int id)
+        {
+            Imagen requestedImage = _repository.GetImagenById(id);
+            if (requestedImage != null)
+            {
+                string webRootpath = _environment.WebRootPath;
+                string folderPath = "\\images\\";
+                string fullPath = webRootpath + folderPath + requestedImage.fullPath;
+                if (System.IO.File.Exists(fullPath))
+                {
+                    FileStream fileOnDisk = new FileStream(fullPath, FileMode.Open);
+                    byte[] fileBytes;
+                    using (BinaryReader br = new BinaryReader(fileOnDisk))
+                    {
+                        fileBytes = br.ReadBytes((int)fileOnDisk.Length);
+                    }
+                    return File(fileBytes, "image/jpeg");// requestedCupcake.ImageMimeType);
+                }
+                else
+                {
+                    return NotFound();
+                }
+            }
+            else
+            {
+                return NotFound();
+            }
         }
 
         // GET: Publicacions
@@ -58,6 +94,7 @@ namespace RedSocial.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 publicacion.fecha = DateTime.Now;
                 _context.Add(publicacion);
                 await _context.SaveChangesAsync();
@@ -145,7 +182,8 @@ namespace RedSocial.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
+        //UPLOAD FILEs
+        
         private bool PublicacionExists(int id)
         {
             return _context.Publicaciones.Any(e => e.putlicationId == id);

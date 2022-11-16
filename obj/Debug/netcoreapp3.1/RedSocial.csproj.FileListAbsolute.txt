@@ -327,3 +327,8 @@ D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\De
 D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Publicacions\Details.cshtml.g.cs
 D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Publicacions\Edit.cshtml.g.cs
 D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Publicacions\Index.cshtml.g.cs
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Imagens\Create.cshtml.g.cs
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Imagens\Delete.cshtml.g.cs
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Imagens\Details.cshtml.g.cs
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Imagens\Edit.cshtml.g.cs
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Imagens\Index.cshtml.g.cs

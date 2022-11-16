@@ -1,4 +1,4 @@
-﻿@model RedSocial.Models.Publicacion
+﻿@model RedSocial.Models.Imagen
 
 @{
     ViewData["Title"] = "Create";
@@ -6,24 +6,23 @@
 
 <h1>Create</h1>
 
-<h4>Publicacion</h4>
+<h4>Imagen</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
-            <div asp-validation-summary="All" class="text-danger"></div>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="texto" class="control-label"></label>
-                <input asp-for="texto" class="form-control" />
-                <span asp-validation-for="texto" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="file" accept=".jpg" name="imagenes" id="imagenes"  />
+                <label asp-for="fullPath" class="control-label"></label>
+                <input asp-for="fullPath" class="form-control" />
+                <span asp-validation-for="fullPath" class="text-danger"></span>
+                <div class="form-group">
+                <input type="file" accept=".jpg" name="imagen" id="lista"/>
+                </div>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
-            
         </form>
     </div>
 </div>

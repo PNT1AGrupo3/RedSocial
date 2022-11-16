@@ -12,6 +12,8 @@ namespace RedSocial.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int imagenId { get; set; }
+
+        
         public string fullPath { get; set; }
         public string getFileName()     // aplicación de los cupcakes
         {

@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RedSocial.Context;
 using RedSocial.Models;
 using RedSocial.Repositories;
+
 
 namespace RedSocial.Controllers
 {
@@ -90,17 +88,65 @@ namespace RedSocial.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("putlicationId,fecha,texto")] Publicacion publicacion)
+        public async Task<IActionResult> Create([Bind("putlicationId,fecha,texto")] Publicacion publicacion, String[] imagenes)
         {
-            if (ModelState.IsValid)
+            
+            if (ModelState.IsValid && this.sonImagenesValidas(imagenes))
             {
+                // COMO OBTENER DATOS DE LAS IMAGENES
+                //si puedo crear las imagenes 
+                //
                 
+
+
                 publicacion.fecha = DateTime.Now;
                 _context.Add(publicacion);
+                await _context.SaveChangesAsync();
+                //select IDENT_CURRENT('Publicaciones') or SCOPE_IDENTITY()
+                var tmpPublicacion = await _context.Publicaciones
+                .FirstOrDefaultAsync(m => m.putlicationId == id)
+
+
+                Imagen prueba = new Imagen();
+                prueba.fullPath = "prueba";
+
+
+                _context.Add(prueba);
+
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(publicacion);
+        }
+        private Boolean sonImagenesValidas(String[] imagenes)
+        {
+            //AVISAR AL USUARIO QUE NO SE CREO LA IMAGEN
+            Boolean resultado = true;
+            FileInfo info;
+            int i = 0;
+            /*foreach(String imagen in imagenes)
+            {
+                
+                info = new FileInfo(imagen);
+                if (info.Extension != ".jpg")
+                {
+                    resultado = false;
+                }
+                Console.WriteLine(info.Extension);
+            }*/
+            while (i<imagenes.Length && resultado == true)
+            {
+                info = new FileInfo(imagenes[i]);
+                if (info.Extension != ".jpg")
+                {
+                    resultado = false;
+                }
+                else
+                {
+                    i++;
+                }
+            }
+            return resultado;
         }
 
         // GET: Publicacions/Edit/5

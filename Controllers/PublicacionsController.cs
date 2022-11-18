@@ -95,7 +95,7 @@ namespace RedSocial.Controllers
         {
             //
             //String[] imagenes=new string[10];
-            if (!this.sonImagenesValidas(imagenes))
+            if (!this.sonImagenesValidas(imagenes) || imagenes.Count==0)
             {
                 ModelState.AddModelError("imagenes", "Agregue una o mas imagenes en formato .JPG");
             }

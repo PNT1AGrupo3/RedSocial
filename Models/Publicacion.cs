@@ -21,7 +21,7 @@ namespace RedSocial.Models
         [NotMapped]
         public virtual ICollection<Usuario> likes { get; set; } //circular
         //[NotMapped]
-        [Required]
+        
         public virtual ICollection<Comentario> comentarios { get; set; }
         //[NotMapped]
 

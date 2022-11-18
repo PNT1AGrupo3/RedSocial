@@ -21,12 +21,12 @@ namespace RedSocial.Models
         [NotMapped]
         public virtual ICollection<Usuario> likes { get; set; } //circular
         //[NotMapped]
+        [Required]
         public virtual ICollection<Comentario> comentarios { get; set; }
         //[NotMapped]
 
         // POR ALGUN MOTIVO NO VALIDA CUANDO TIENE INFORMACIÓN DE ARCHIVOS
         //[DataType(DataType.EmailAddress)]
-        //[Required(ErrorMessage = "Ingrese una o mas imagenes jpg")]
         
         public virtual ICollection<Imagen> imagenes { get; set; }
         //public virtual String imagenes { get; set; }

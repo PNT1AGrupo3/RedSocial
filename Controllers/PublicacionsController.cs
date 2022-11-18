@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RedSocial.Context;
@@ -88,55 +91,68 @@ namespace RedSocial.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("putlicationId,fecha,texto")] Publicacion publicacion, String[] imagenes)
+        public async Task<IActionResult> Create([Bind("putlicationId,fecha,texto")] Publicacion publicacion, List<IFormFile> imagenes)
         {
-            
-            if (ModelState.IsValid && this.sonImagenesValidas(imagenes))
+            //
+            //String[] imagenes=new string[10];
+            if (!this.sonImagenesValidas(imagenes))
             {
-                // COMO OBTENER DATOS DE LAS IMAGENES
-                //si puedo crear las imagenes 
-                //
-                
+                ModelState.AddModelError("imagenes", "Agregue una o mas imagenes en formato .JPG");
+            }
 
+
+            // SI IMAGENES ESTA VACIO NO LE AVISA AL USUARIO
+            if (ModelState.IsValid)
+            {
 
                 publicacion.fecha = DateTime.Now;
+                publicacion.imagenes = new List<Imagen>();
+                //AGREGANDO IMAGENES DIRECTO A LA LISTA DE PUBLICACION
+                foreach (IFormFile imagen in imagenes)
+                {
+                    Imagen tmpImagen = new Imagen();
+                    tmpImagen.fullPath = imagen.FileName;
+                    publicacion.imagenes.Add(tmpImagen);
+                }
                 _context.Add(publicacion);
                 await _context.SaveChangesAsync();
-                //select IDENT_CURRENT('Publicaciones') or SCOPE_IDENTITY()
-                var tmpPublicacion = await _context.Publicaciones
-                .FirstOrDefaultAsync(m => m.putlicationId == id)
-
-
-                Imagen prueba = new Imagen();
-                prueba.fullPath = "prueba";
-
-
-                _context.Add(prueba);
-
-                await _context.SaveChangesAsync();
+                //SUBIR IMAGENES AL SERVIDOR
+                await uploadFiles(imagenes, publicacion.putlicationId);
                 return RedirectToAction(nameof(Index));
             }
             return View(publicacion);
         }
-        private Boolean sonImagenesValidas(String[] imagenes)
+        public async Task<IActionResult> uploadFiles(List<IFormFile> files, int publicationID)
+        {
+            long size = files.Sum(f => f.Length);
+            int i = 0;
+            foreach (var formFile in files)
+            {
+
+                if (formFile.Length > 0)
+                {
+                    String extension = Path.GetExtension(formFile.FileName);
+
+                    var filePath = _environment.WebRootPath + "\\Images\\" + publicationID + "-" + i + extension;
+                    using (var stream = System.IO.File.Create(filePath))
+                    {
+                        await formFile.CopyToAsync(stream);
+                    }
+                }
+                i++;
+            }
+            return Ok(new { count = files.Count, size });
+        }
+
+        private Boolean sonImagenesValidas(List<IFormFile> imagenes)
         {
             //AVISAR AL USUARIO QUE NO SE CREO LA IMAGEN
             Boolean resultado = true;
             FileInfo info;
             int i = 0;
-            /*foreach(String imagen in imagenes)
+            while (i < imagenes.Count && resultado == true)
             {
-                
-                info = new FileInfo(imagen);
-                if (info.Extension != ".jpg")
-                {
-                    resultado = false;
-                }
-                Console.WriteLine(info.Extension);
-            }*/
-            while (i<imagenes.Length && resultado == true)
-            {
-                info = new FileInfo(imagenes[i]);
+                info = new FileInfo(imagenes[i].FileName);
                 if (info.Extension != ".jpg")
                 {
                     resultado = false;
@@ -229,7 +245,7 @@ namespace RedSocial.Controllers
             return RedirectToAction(nameof(Index));
         }
         //UPLOAD FILEs
-        
+
         private bool PublicacionExists(int id)
         {
             return _context.Publicaciones.Any(e => e.putlicationId == id);

@@ -40,7 +40,7 @@ namespace RedSocial.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     fecha = table.Column<DateTime>(nullable: false),
                     texto = table.Column<string>(nullable: false),
-                    UsuariouserId = table.Column<int>(nullable: true)
+                    UsuariouserId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {

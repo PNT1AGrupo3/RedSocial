@@ -58,6 +58,7 @@ namespace RedSocial.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 usuario.fechaCreacion = DateTime.Now;
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();

@@ -15,7 +15,6 @@ namespace RedSocial.Models
 
         [Required]
         public string fullPath { get; set; }
-        
         public string getFileName()     // aplicación de los cupcakes
         {
             return "ver como se conforma el full path en el web server";

@@ -317,11 +317,6 @@ D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\De
 D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\Create.cshtml.g.cs
-D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\Delete.cshtml.g.cs
-D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\Details.cshtml.g.cs
-D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\Edit.cshtml.g.cs
-D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\Index.cshtml.g.cs
 D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.RazorTargetAssemblyInfo.cache
@@ -332,3 +327,8 @@ D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\De
 D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.pdb
 D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.genruntimeconfig.cache
 D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\RedSocial.csprojAssemblyReference.cache
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\Create.cshtml.g.cs
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\Delete.cshtml.g.cs
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\Details.cshtml.g.cs
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\Edit.cshtml.g.cs
+D:\Estudios\Analista de Sistemas\2 CUAT\3-PNT1 - HTML\RedSocial\RedSocial\obj\Debug\netcoreapp3.1\Razor\Views\Usuarios\Index.cshtml.g.cs

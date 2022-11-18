@@ -5,6 +5,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20221118213837_Inicial.cs" />
+    <Compile Remove="Migrations\20221118213837_Inicial.Designer.cs" />
+    <Compile Remove="Migrations\20221118213926_Inicial.cs" />
+    <Compile Remove="Migrations\20221118213926_Inicial.Designer.cs" />
+    <Compile Remove="Migrations\20221118214040_Inicial.cs" />
+    <Compile Remove="Migrations\20221118214040_Inicial.Designer.cs" />
+    <Compile Remove="Migrations\20221118214135_Inicial.cs" />
+    <Compile Remove="Migrations\20221118214135_Inicial.Designer.cs" />
+    <Compile Remove="Migrations\20221118214302_Inicial.cs" />
+    <Compile Remove="Migrations\20221118214302_Inicial.Designer.cs" />
+    <Compile Remove="Migrations\20221118214557_Inicial.cs" />
+    <Compile Remove="Migrations\20221118214557_Inicial.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.30" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.30" />

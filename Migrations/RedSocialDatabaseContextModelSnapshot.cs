@@ -67,8 +67,8 @@ namespace RedSocial.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("UsuariouserId")
-                        .HasColumnType("int");
+                    b.Property<string>("Usuarioemail")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("fecha")
                         .HasColumnType("datetime2");
@@ -79,27 +79,21 @@ namespace RedSocial.Migrations
 
                     b.HasKey("putlicationId");
 
-                    b.HasIndex("UsuariouserId");
+                    b.HasIndex("Usuarioemail");
 
                     b.ToTable("Publicaciones");
                 });
 
             modelBuilder.Entity("RedSocial.Models.Usuario", b =>
                 {
-                    b.Property<int>("userId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("email")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<int?>("UsuariouserId")
-                        .HasColumnType("int");
+                    b.Property<string>("Usuarioemail")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int?>("comentarioId")
                         .HasColumnType("int");
-
-                    b.Property<string>("email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("fechaCreacion")
                         .HasColumnType("datetime2");
@@ -117,9 +111,9 @@ namespace RedSocial.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("userId");
+                    b.HasKey("email");
 
-                    b.HasIndex("UsuariouserId");
+                    b.HasIndex("Usuarioemail");
 
                     b.HasIndex("comentarioId");
 
@@ -144,14 +138,14 @@ namespace RedSocial.Migrations
                 {
                     b.HasOne("RedSocial.Models.Usuario", null)
                         .WithMany("publicaciones")
-                        .HasForeignKey("UsuariouserId");
+                        .HasForeignKey("Usuarioemail");
                 });
 
             modelBuilder.Entity("RedSocial.Models.Usuario", b =>
                 {
                     b.HasOne("RedSocial.Models.Usuario", null)
                         .WithMany("amigos")
-                        .HasForeignKey("UsuariouserId");
+                        .HasForeignKey("Usuarioemail");
 
                     b.HasOne("RedSocial.Models.Comentario", null)
                         .WithMany("usuarios")

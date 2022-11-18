@@ -26,7 +26,7 @@ namespace RedSocial.Controllers
         }
 
         // GET: Usuarios/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(string id)
         {
             if (id == null)
             {
@@ -34,7 +34,7 @@ namespace RedSocial.Controllers
             }
 
             var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.userId == id);
+                .FirstOrDefaultAsync(m => m.email == id);
             if (usuario == null)
             {
                 return NotFound();
@@ -54,12 +54,10 @@ namespace RedSocial.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("userId,password,email,preguntaSecreta,respuestaSecreta,fechaCreacion")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("email,password,preguntaSecreta,respuestaSecreta,fechaCreacion")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
-                
-                usuario.fechaCreacion = DateTime.Now;
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -68,7 +66,7 @@ namespace RedSocial.Controllers
         }
 
         // GET: Usuarios/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
             {
@@ -88,9 +86,9 @@ namespace RedSocial.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("userId,password,email,preguntaSecreta,respuestaSecreta,fechaCreacion")] Usuario usuario)
+        public async Task<IActionResult> Edit(string id, [Bind("email,password,preguntaSecreta,respuestaSecreta,fechaCreacion")] Usuario usuario)
         {
-            if (id != usuario.userId)
+            if (id != usuario.email)
             {
                 return NotFound();
             }
@@ -104,7 +102,7 @@ namespace RedSocial.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!UsuarioExists(usuario.userId))
+                    if (!UsuarioExists(usuario.email))
                     {
                         return NotFound();
                     }
@@ -119,7 +117,7 @@ namespace RedSocial.Controllers
         }
 
         // GET: Usuarios/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
             {
@@ -127,7 +125,7 @@ namespace RedSocial.Controllers
             }
 
             var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.userId == id);
+                .FirstOrDefaultAsync(m => m.email == id);
             if (usuario == null)
             {
                 return NotFound();
@@ -139,7 +137,7 @@ namespace RedSocial.Controllers
         // POST: Usuarios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(string id)
         {
             var usuario = await _context.Usuarios.FindAsync(id);
             _context.Usuarios.Remove(usuario);
@@ -147,9 +145,9 @@ namespace RedSocial.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool UsuarioExists(int id)
+        private bool UsuarioExists(string id)
         {
-            return _context.Usuarios.Any(e => e.userId == id);
+            return _context.Usuarios.Any(e => e.email == id);
         }
     }
 }

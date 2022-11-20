@@ -5,16 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using RedSocial.Context;
 using RedSocial.Models;
 
 namespace RedSocial.Controllers
 {
     public class UsuariosController : Controller
     {
-        private readonly RedSocialDatabaseContext _context;
+        private readonly RedSocialBDContext _context;
 
-        public UsuariosController(RedSocialDatabaseContext context)
+        public UsuariosController(RedSocialBDContext context)
         {
             _context = context;
         }
@@ -22,7 +21,7 @@ namespace RedSocial.Controllers
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Usuarios.ToListAsync());
+            return View(await _context.Usuario.ToListAsync());
         }
 
         // GET: Usuarios/Details/5
@@ -33,8 +32,8 @@ namespace RedSocial.Controllers
                 return NotFound();
             }
 
-            var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.email == id);
+            var usuario = await _context.Usuario
+                .FirstOrDefaultAsync(m => m.Email == id);
             if (usuario == null)
             {
                 return NotFound();
@@ -54,10 +53,18 @@ namespace RedSocial.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("email,password,preguntaSecreta,respuestaSecreta,fechaCreacion")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("Email,Password,Nombre,Apellido,PreguntaSecreta,RespuestaSecreta,FechaCreacion")] Usuario usuario, string password2)
         {
+            if (usuario.Password != password2) ModelState.AddModelError("password2", "Las contraseñas no coinciden");
+            var userCheck = await _context.Usuario
+                .FirstOrDefaultAsync(m => m.Email == usuario.Email);
+            if (userCheck != null)
+            {
+                ModelState.AddModelError("Email", "Usuario ya registrado");
+            }
             if (ModelState.IsValid)
             {
+                usuario.FechaCreacion = DateTime.Now;
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -73,7 +80,7 @@ namespace RedSocial.Controllers
                 return NotFound();
             }
 
-            var usuario = await _context.Usuarios.FindAsync(id);
+            var usuario = await _context.Usuario.FindAsync(id);
             if (usuario == null)
             {
                 return NotFound();
@@ -86,9 +93,9 @@ namespace RedSocial.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("email,password,preguntaSecreta,respuestaSecreta,fechaCreacion")] Usuario usuario)
+        public async Task<IActionResult> Edit(string id, [Bind("Email,Password,Nombre,Apellido,PreguntaSecreta,RespuestaSecreta,FechaCreacion")] Usuario usuario)
         {
-            if (id != usuario.email)
+            if (id != usuario.Email)
             {
                 return NotFound();
             }
@@ -102,7 +109,7 @@ namespace RedSocial.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!UsuarioExists(usuario.email))
+                    if (!UsuarioExists(usuario.Email))
                     {
                         return NotFound();
                     }
@@ -124,8 +131,8 @@ namespace RedSocial.Controllers
                 return NotFound();
             }
 
-            var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.email == id);
+            var usuario = await _context.Usuario
+                .FirstOrDefaultAsync(m => m.Email == id);
             if (usuario == null)
             {
                 return NotFound();
@@ -139,15 +146,15 @@ namespace RedSocial.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            var usuario = await _context.Usuarios.FindAsync(id);
-            _context.Usuarios.Remove(usuario);
+            var usuario = await _context.Usuario.FindAsync(id);
+            _context.Usuario.Remove(usuario);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool UsuarioExists(string id)
         {
-            return _context.Usuarios.Any(e => e.email == id);
+            return _context.Usuario.Any(e => e.Email == id);
         }
     }
 }

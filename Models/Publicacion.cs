@@ -1,42 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
+// Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
+// If you have enabled NRTs for your project, then un-comment the following line:
+// #nullable disable
+
 namespace RedSocial.Models
 {
-    public class Publicacion
+    public partial class Publicacion
     {
+        public Publicacion()
+        {
+            Comentario = new HashSet<Comentario>();
+            Imagen = new HashSet<Imagen>();
+            Like = new HashSet<Like>();
+        }
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int putlicationId { get; set; }
-        public DateTime fecha { get; set; }
+        public int PublicacionId { get; set; }
+        public DateTime Fecha { get; set; }
         [DataType(DataType.Text)]
         [Display(Name = "Descripción de la publicación")]
         [Required(ErrorMessage = "Ingrese una descripción")]
-        public string texto { get; set; }
+        public string Texto { get; set; }
+        public string UserEmail { get; set; }
 
-        [NotMapped]
-        public virtual ICollection<Usuario> likes { get; set; } //circular
-        //[NotMapped]
-        
-        public virtual ICollection<Comentario> comentarios { get; set; }
-        //[NotMapped]
-
-        // POR ALGUN MOTIVO NO VALIDA CUANDO TIENE INFORMACIÓN DE ARCHIVOS
-        //[DataType(DataType.EmailAddress)]
-        
-        public virtual ICollection<Imagen> imagenes { get; set; }
-        //public virtual String imagenes { get; set; }
-
-
-        /*public Publicacion()
-        {
-            likes = new List<Usuario>();
-            comentarios = new List<Comentario>();
-            imagenes = new List<Imagen>();
-        }*/
+        public virtual Usuario UserEmailNavigation { get; set; }
+        public virtual ICollection<Comentario> Comentario { get; set; }
+        public virtual ICollection<Imagen> Imagen { get; set; }
+        public virtual ICollection<Like> Like { get; set; }
     }
 }

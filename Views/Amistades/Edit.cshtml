@@ -1,0 +1,44 @@
+﻿@model RedSocial.Models.Amistad
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Amistad</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="EmailSender" class="control-label"></label>
+                <select asp-for="EmailSender" class="form-control" asp-items="ViewBag.EmailSender"></select>
+                <span asp-validation-for="EmailSender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailReciver" class="control-label"></label>
+                <select asp-for="EmailReciver" class="form-control" asp-items="ViewBag.EmailReciver"></select>
+                <span asp-validation-for="EmailReciver" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Aceptada" /> @Html.DisplayNameFor(model => model.Aceptada)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

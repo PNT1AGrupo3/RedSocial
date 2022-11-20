@@ -1,26 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+
+// Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
+// If you have enabled NRTs for your project, then un-comment the following line:
+// #nullable disable
 
 namespace RedSocial.Models
 {
-    public class Comentario
+    public partial class Comentario
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int comentarioId { get; set; }
-        public string texto { get; set; }
+        public int PublicacionId { get; set; }
+        public string Email { get; set; }
+        public string Texto { get; set; }
 
-        //public List<Usuario> usuarios;
-        //[NotMapped]
-        public virtual ICollection<Usuario> usuarios { get; set; }
-        /*public Comentario()
-        {
-            usuarios = new List<Usuario>();
-        }*/
-
+        public virtual Usuario EmailNavigation { get; set; }
+        public virtual Publicacion Publicacion { get; set; }
     }
 }

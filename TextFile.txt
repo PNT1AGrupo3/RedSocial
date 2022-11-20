@@ -1,9 +1,12 @@
 ﻿1- CREAR LAS CLASES CON EL NAMESPACE [NOMBRE_CLASE].MODELS
 2- IMPORTAR LIBRERIAS ENTITY FRAMEWORK:
-	* Microsoft.EntityFrameworkCore.SqlServer
-	* Microsoft.EntityFrameworkCore.Tools
-	* Microsoft.AspNetCore.Mvc.NewtonsoftJson
-	* Newtonsoft.json
+	*  Install-Package Microsoft.AspNetCore.Mvc.NewtonsoftJson 3.1.3
+	* Microsoft.EntityFrameworkCore.Sqlite 3.1.30
+	* Microsoft.EntityFrameworkCore.SqlServer 3.1.30
+	* Microsoft.EntityFrameworkCore.Tools 3.1.30
+	* Microsoft.VisualStudio.Web.CodeGeneration.Design 3.1.5
+	* Newtonsoft.json 12.0.3
+	
 3- CREAR EL CONTEXT
 4- COMPLETAR APPSETTINGS.JSON CON EL STRING DE CONEXION
 5- COMPLETAR LA CLASE STARTUP 
@@ -12,5 +15,3 @@
 8- update-database -verbose  <- esto hace el update de la base de datos
 9- En controller agregar nuevo elemento con scaffold para cada clase (crea controller MVC con vistas que usan EF y views para el crud(ABM))
 10- Para agregar el enum a la pagina de add.
-
-

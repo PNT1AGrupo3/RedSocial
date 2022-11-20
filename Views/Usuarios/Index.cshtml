@@ -13,16 +13,22 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.password)
+                @Html.DisplayNameFor(model => model.Password)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.preguntaSecreta)
+                @Html.DisplayNameFor(model => model.Nombre)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.respuestaSecreta)
+                @Html.DisplayNameFor(model => model.Apellido)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.fechaCreacion)
+                @Html.DisplayNameFor(model => model.PreguntaSecreta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RespuestaSecreta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaCreacion)
             </th>
             <th></th>
         </tr>
@@ -31,21 +37,27 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.password)
+                @Html.DisplayFor(modelItem => item.Password)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.preguntaSecreta)
+                @Html.DisplayFor(modelItem => item.Nombre)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.respuestaSecreta)
+                @Html.DisplayFor(modelItem => item.Apellido)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.fechaCreacion)
+                @Html.DisplayFor(modelItem => item.PreguntaSecreta)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.email">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.email">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.email">Delete</a>
+                @Html.DisplayFor(modelItem => item.RespuestaSecreta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaCreacion)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Email">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Email">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Email">Delete</a>
             </td>
         </tr>
 }

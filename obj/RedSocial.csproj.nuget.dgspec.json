@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Estudios\\Analista de Sistemas\\2 CUAT\\3-PNT1 - HTML\\RedSocial\\RedSocial\\RedSocial.csproj": {}
+    "D:\\Estudios\\Analista de Sistemas\\2 CUAT\\3-PNT1 - HTML\\RedSocial\\RedSocial\\RedSocial\\RedSocial.csproj": {}
   },
   "projects": {
-    "D:\\Estudios\\Analista de Sistemas\\2 CUAT\\3-PNT1 - HTML\\RedSocial\\RedSocial\\RedSocial.csproj": {
+    "D:\\Estudios\\Analista de Sistemas\\2 CUAT\\3-PNT1 - HTML\\RedSocial\\RedSocial\\RedSocial\\RedSocial.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Estudios\\Analista de Sistemas\\2 CUAT\\3-PNT1 - HTML\\RedSocial\\RedSocial\\RedSocial.csproj",
+        "projectUniqueName": "D:\\Estudios\\Analista de Sistemas\\2 CUAT\\3-PNT1 - HTML\\RedSocial\\RedSocial\\RedSocial\\RedSocial.csproj",
         "projectName": "RedSocial",
-        "projectPath": "D:\\Estudios\\Analista de Sistemas\\2 CUAT\\3-PNT1 - HTML\\RedSocial\\RedSocial\\RedSocial.csproj",
+        "projectPath": "D:\\Estudios\\Analista de Sistemas\\2 CUAT\\3-PNT1 - HTML\\RedSocial\\RedSocial\\RedSocial\\RedSocial.csproj",
         "packagesPath": "C:\\Users\\Franco\\.nuget\\packages\\",
-        "outputPath": "D:\\Estudios\\Analista de Sistemas\\2 CUAT\\3-PNT1 - HTML\\RedSocial\\RedSocial\\obj\\",
+        "outputPath": "D:\\Estudios\\Analista de Sistemas\\2 CUAT\\3-PNT1 - HTML\\RedSocial\\RedSocial\\RedSocial\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

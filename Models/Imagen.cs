@@ -1,24 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+
+// Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
+// If you have enabled NRTs for your project, then un-comment the following line:
+// #nullable disable
 
 namespace RedSocial.Models
 {
-    public class Imagen
+    public partial class Imagen
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int imagenId { get; set; }
+        public int ImagenId { get; set; }
+        public string FullPath { get; set; }
+        public int PublicacionId { get; set; }
 
-        [Required]
-        public string fullPath { get; set; }
-        public string getFileName()     // aplicación de los cupcakes
-        {
-            return "ver como se conforma el full path en el web server";
-        }
-
+        public virtual Publicacion Publicacion { get; set; }
     }
 }

@@ -1,8 +1,0 @@
- // agregado por los likes  9/11/2022 
-                    table.ForeignKey(
-                        name: "FK_Likes_Usuarios_UsuariouserId",
-                        column: x => x.UsuariouserId,
-                        principalTable: "Usuarios",
-                        principalColumn: "userId",
-                        onDelete: ReferentialAction.Restrict);
-                    // fin agregado por los likes

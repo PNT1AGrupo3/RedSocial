@@ -26,20 +26,29 @@ namespace RedSocial.Controllers
         // GET: Publicaciones
         public async Task<IActionResult> Index()
         {
-            var redSocialBDContext = _context.Publicacion.Include(p => p.UserEmailNavigation);
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
+
+            var redSocialBDContext = _context.Publicacion.Include(p => p.Imagen);
             return View(await redSocialBDContext.ToListAsync());
         }
 
         // GET: Publicaciones/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             if (id == null)
             {
                 return NotFound();
             }
 
-            var publicacion = await _context.Publicacion
-                .Include(p => p.UserEmailNavigation)
+            var publicacion = await _context.Publicacion                
+                .Include(p => p.UserEmailNavigation)                
                 .FirstOrDefaultAsync(m => m.PublicacionId == id);
             if (publicacion == null)
             {
@@ -52,7 +61,8 @@ namespace RedSocial.Controllers
         // GET: Publicaciones/Create
         public IActionResult Create()
         {
-            ViewData["UserEmail"] = new SelectList(_context.Usuario, "Email", "Email");
+
+            //ViewData["UserEmail"] = new SelectList(_context.Usuario, "Email", "Email");
             return View();
         }
 
@@ -63,7 +73,13 @@ namespace RedSocial.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("PublicacionId,Fecha,Texto,UserEmail")] Publicacion publicacion, List<IFormFile> imagenes)
         {
-            
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
+            String user =Autenticacion.getSessionId().ToLower();
+            String fileName = "";
+            int i = 0;
             if (!this.sonImagenesValidas(imagenes))
             {
                 ModelState.AddModelError("imagenes", "Agregue una o mas imagenes en formato .JPG");
@@ -71,17 +87,20 @@ namespace RedSocial.Controllers
             if (ModelState.IsValid)
             {
                 publicacion.Fecha = DateTime.Now;
+                publicacion.UserEmail = user;
+                _context.Add(publicacion);
+                await _context.SaveChangesAsync();
                 foreach (IFormFile imagen in imagenes)
                 {
                     Imagen tmpImagen = new Imagen();
-                    //AREGLAR EL FILE PATH CON EL ID PUBLICACION Y EL INDEX DE LA IMAGEN
-                    tmpImagen.FullPath = imagen.FileName;
+                    fileName = publicacion.PublicacionId + "-" + i;
+                    tmpImagen.FullPath = "../images/" + fileName + ".jpg";
                     publicacion.Imagen.Add(tmpImagen);
+                    await uploadFile(imagen, fileName);
+                    i++;
                 }
-
-                _context.Add(publicacion);
+                _context.Update(publicacion);
                 await _context.SaveChangesAsync();
-                await uploadFiles(imagenes, publicacion.PublicacionId);
                 return RedirectToAction(nameof(Index));
             }
             //VER QUE HACE ESTO
@@ -106,7 +125,18 @@ namespace RedSocial.Controllers
             }
             return resultado;
         }
-        public async Task<IActionResult> uploadFiles(List<IFormFile> files, int publicationID)
+        public async Task<IActionResult> uploadFile(IFormFile file, String filename)
+        {
+            String extension = Path.GetExtension(file.FileName);
+            var filePath = _environment.WebRootPath + "\\images\\" + filename + extension;
+            using (var stream = System.IO.File.Create(filePath))
+            {
+                await file.CopyToAsync(stream);
+            }
+            return Ok(new { count = 1, file.Length });
+        }
+        
+            public async Task<IActionResult> uploadFiles(List<IFormFile> files, int publicationID)
         {
             long size = files.Sum(f => f.Length);
             int i = 0;
@@ -130,6 +160,10 @@ namespace RedSocial.Controllers
         // GET: Publicaciones/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             if (id == null)
             {
                 return NotFound();
@@ -140,6 +174,7 @@ namespace RedSocial.Controllers
             {
                 return NotFound();
             }
+            //cambiar por el usuario autenticado
             ViewData["UserEmail"] = new SelectList(_context.Usuario, "Email", "Email", publicacion.UserEmail);
             return View(publicacion);
         }
@@ -151,6 +186,10 @@ namespace RedSocial.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("PublicacionId,Fecha,Texto,UserEmail")] Publicacion publicacion)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             if (id != publicacion.PublicacionId)
             {
                 return NotFound();
@@ -179,10 +218,17 @@ namespace RedSocial.Controllers
             ViewData["UserEmail"] = new SelectList(_context.Usuario, "Email", "Email", publicacion.UserEmail);
             return View(publicacion);
         }
-
+        /*public ActionResult GetImage(int imagenId)
+        {
+            //return 1;
+        }*/
         // GET: Publicaciones/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             if (id == null)
             {
                 return NotFound();
@@ -204,6 +250,10 @@ namespace RedSocial.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             var publicacion = await _context.Publicacion.FindAsync(id);
             _context.Publicacion.Remove(publicacion);
             await _context.SaveChangesAsync();

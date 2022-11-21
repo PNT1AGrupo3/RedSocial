@@ -21,6 +21,11 @@ namespace RedSocial.Controllers
         // GET: Imagenes
         public async Task<IActionResult> Index()
         {
+            
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             var redSocialBDContext = _context.Imagen.Include(i => i.Publicacion);
             return View(await redSocialBDContext.ToListAsync());
         }
@@ -28,6 +33,10 @@ namespace RedSocial.Controllers
         // GET: Imagenes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             if (id == null)
             {
                 return NotFound();
@@ -47,6 +56,10 @@ namespace RedSocial.Controllers
         // GET: Imagenes/Create
         public IActionResult Create()
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             ViewData["PublicacionId"] = new SelectList(_context.Publicacion, "PublicacionId", "Texto");
             return View();
         }
@@ -58,6 +71,10 @@ namespace RedSocial.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ImagenId,FullPath,PublicacionId")] Imagen imagen)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             if (ModelState.IsValid)
             {
                 _context.Add(imagen);
@@ -71,6 +88,10 @@ namespace RedSocial.Controllers
         // GET: Imagenes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             if (id == null)
             {
                 return NotFound();
@@ -92,6 +113,10 @@ namespace RedSocial.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ImagenId,FullPath,PublicacionId")] Imagen imagen)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             if (id != imagen.ImagenId)
             {
                 return NotFound();
@@ -124,6 +149,10 @@ namespace RedSocial.Controllers
         // GET: Imagenes/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             if (id == null)
             {
                 return NotFound();
@@ -145,6 +174,10 @@ namespace RedSocial.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             var imagen = await _context.Imagen.FindAsync(id);
             _context.Imagen.Remove(imagen);
             await _context.SaveChangesAsync();

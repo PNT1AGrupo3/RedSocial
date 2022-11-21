@@ -28,15 +28,13 @@ namespace RedSocial
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-            //services.AddTransient<IImagenRepository, ImagenRepository>();
             services.AddDbContext<RedSocialBDContext>(options =>
             options.UseSqlServer(Configuration["ConnectionString:RedSocialDBConnection"]));
-            services.AddMvc().AddNewtonsoftJson(options =>
-           options.SerializerSettings.ReferenceLoopHandling =
-           ReferenceLoopHandling.Ignore)
-
-           .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            services.AddMvc().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddControllersWithViews();
+            services.AddSession();
+            //services.AddSingleton(ISingletonService, OperationService)();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,14 +54,16 @@ namespace RedSocial
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseSession();
             app.UseAuthorization();
+            
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    //pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Usuarios}/{action=Login}/{id?}");
             });
         }
     }

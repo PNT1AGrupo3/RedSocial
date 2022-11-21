@@ -21,6 +21,14 @@ namespace RedSocial.Controllers
         // GET: Amistades
         public async Task<IActionResult> Index()
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             var redSocialBDContext = _context.Amistad.Include(a => a.EmailReciverNavigation).Include(a => a.EmailSenderNavigation);
             return View(await redSocialBDContext.ToListAsync());
         }
@@ -28,6 +36,10 @@ namespace RedSocial.Controllers
         // GET: Amistades/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             if (id == null)
             {
                 return NotFound();
@@ -48,6 +60,10 @@ namespace RedSocial.Controllers
         // GET: Amistades/Create
         public IActionResult Create()
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             ViewData["EmailReciver"] = new SelectList(_context.Usuario, "Email", "Email");
             ViewData["EmailSender"] = new SelectList(_context.Usuario, "Email", "Email");
             return View();
@@ -60,6 +76,10 @@ namespace RedSocial.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,EmailSender,EmailReciver,Aceptada")] Amistad amistad)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             if (ModelState.IsValid)
             {
                 _context.Add(amistad);
@@ -74,6 +94,10 @@ namespace RedSocial.Controllers
         // GET: Amistades/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             if (id == null)
             {
                 return NotFound();
@@ -96,6 +120,10 @@ namespace RedSocial.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,EmailSender,EmailReciver,Aceptada")] Amistad amistad)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             if (id != amistad.Id)
             {
                 return NotFound();
@@ -129,6 +157,10 @@ namespace RedSocial.Controllers
         // GET: Amistades/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             if (id == null)
             {
                 return NotFound();
@@ -151,6 +183,10 @@ namespace RedSocial.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             var amistad = await _context.Amistad.FindAsync(id);
             _context.Amistad.Remove(amistad);
             await _context.SaveChangesAsync();

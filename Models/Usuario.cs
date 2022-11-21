@@ -21,6 +21,7 @@ namespace RedSocial.Models
 
         [DataType(DataType.EmailAddress)]
         [Display(Name = "E-Mail:")]
+        [EmailAddress(ErrorMessage = "Formato de email incorrecto")]
         [Required(ErrorMessage = "Ingrese su email")]
         [Key]
         public string Email { get; set; }

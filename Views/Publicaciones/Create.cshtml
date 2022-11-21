@@ -17,19 +17,13 @@
                 <input asp-for="Texto" class="form-control" />
                 <span asp-validation-for="Texto" class="text-danger"></span>
             </div>
-            
-            //BORRAR ESTE CAMPO UNA VEZ DEPURADO INCORPORADO EL LOGUIN
-            <div class="form-group">
-                <label asp-for="UserEmail" class="control-label"></label>
-                <select asp-for="UserEmail" class ="form-control" asp-items="ViewBag.UserEmail"></select>
-            </div>
             <div class="form-group">
                 <label asp-for="Imagen" class="control-label"></label>
                 <input asp-for="Imagen" class="form-control" type="file" accept=".jpg" name="imagenes" id="imagenes" multiple/>
                 <span asp-validation-for="Imagen" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Crear" class="btn btn-primary" />
             </div>
         </form>
     </div>

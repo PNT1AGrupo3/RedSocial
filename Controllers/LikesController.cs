@@ -21,6 +21,10 @@ namespace RedSocial.Controllers
         // GET: Likes
         public async Task<IActionResult> Index()
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             var redSocialBDContext = _context.Like.Include(l => l.EmailNavigation).Include(l => l.Publicacion);
             return View(await redSocialBDContext.ToListAsync());
         }
@@ -28,6 +32,10 @@ namespace RedSocial.Controllers
         // GET: Likes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             if (id == null)
             {
                 return NotFound();
@@ -48,6 +56,10 @@ namespace RedSocial.Controllers
         // GET: Likes/Create
         public IActionResult Create()
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             ViewData["Email"] = new SelectList(_context.Usuario, "Email", "Email");
             ViewData["PublicacionId"] = new SelectList(_context.Publicacion, "PublicacionId", "Texto");
             return View();
@@ -60,6 +72,10 @@ namespace RedSocial.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("PublicacionId,Email")] Like like)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             if (ModelState.IsValid)
             {
                 _context.Add(like);
@@ -74,6 +90,10 @@ namespace RedSocial.Controllers
         // GET: Likes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             if (id == null)
             {
                 return NotFound();
@@ -96,6 +116,10 @@ namespace RedSocial.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("PublicacionId,Email")] Like like)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             if (id != like.PublicacionId)
             {
                 return NotFound();
@@ -129,6 +153,10 @@ namespace RedSocial.Controllers
         // GET: Likes/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             if (id == null)
             {
                 return NotFound();
@@ -151,6 +179,10 @@ namespace RedSocial.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            if (!Autenticacion.estaAutenticado())
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
             var like = await _context.Like.FindAsync(id);
             _context.Like.Remove(like);
             await _context.SaveChangesAsync();

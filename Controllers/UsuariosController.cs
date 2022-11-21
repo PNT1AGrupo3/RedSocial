@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RedSocial.Models;
 
@@ -21,6 +19,7 @@ namespace RedSocial.Controllers
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
+
             return View(await _context.Usuario.ToListAsync());
         }
 
@@ -48,6 +47,49 @@ namespace RedSocial.Controllers
             return View();
         }
 
+        public IActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Login(String Email, String Password)
+        {
+            bool inicioSesion = false;
+            var usuario = await _context.Usuario.FindAsync(Email);
+            if (usuario != null)
+            {
+                if (usuario.Password == Password)
+                {
+                    Autenticacion.login(HttpContext, Email);
+                    inicioSesion = true;
+                }
+                
+
+            }
+            if (inicioSesion)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                ModelState.AddModelError("Email", "Usuario y/o contraseña incorrectos");
+                ModelState.AddModelError("Password", "Usuario y/o contraseña incorrectos");
+                return View();
+            }
+            
+        }
+        public IActionResult Logout()
+        {
+            Autenticacion.logout(HttpContext);
+            return RedirectToAction("Index", "Home");
+        }
+        [HttpPost]
+        public IActionResult Logout(String Email, String Password)
+        {
+            Autenticacion.logout(HttpContext);
+            return RedirectToAction("Index", "Home");
+        }
+        
         // POST: Usuarios/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -65,6 +107,7 @@ namespace RedSocial.Controllers
             if (ModelState.IsValid)
             {
                 usuario.FechaCreacion = DateTime.Now;
+                usuario.Email = usuario.Email.ToLower();
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

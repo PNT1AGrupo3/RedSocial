@@ -16,6 +16,7 @@ namespace RedSocial.Controllers
         public AdminController(ILogger<AdminController> logger)
         {
             _logger = logger;
+            
         }
 
         public IActionResult Index()

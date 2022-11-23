@@ -110,9 +110,11 @@ namespace RedSocial.Controllers
                 usuario.Email = usuario.Email.ToLower();
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                //return RedirectToAction(nameof(Index));
+                return RedirectToAction("Login", "Usuarios");
             }
             return View(usuario);
+            
         }
 
         // GET: Usuarios/Edit/5

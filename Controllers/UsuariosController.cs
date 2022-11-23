@@ -183,7 +183,7 @@ namespace RedSocial.Controllers
 
             return View(usuario);
         }
-
+        
         // POST: Usuarios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

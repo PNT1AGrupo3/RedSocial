@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RedSocial.Models;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace RedSocial.Controllers
 {
@@ -160,10 +160,12 @@ namespace RedSocial.Controllers
         // GET: Publicaciones/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            
             if (!Autenticacion.estaAutenticado())
             {
                 return RedirectToAction("Login", "Usuarios");
             }
+           
             if (id == null)
             {
                 return NotFound();
@@ -197,6 +199,9 @@ namespace RedSocial.Controllers
 
             if (ModelState.IsValid)
             {
+                publicacion.UserEmail = Autenticacion.getSessionId();
+
+                publicacion.Fecha = DateTime.Now;
                 try
                 {
                     _context.Update(publicacion);

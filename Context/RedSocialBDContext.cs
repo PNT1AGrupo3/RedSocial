@@ -56,7 +56,7 @@ namespace RedSocial.Models
                 entity.HasOne(d => d.EmailReciverNavigation)
                     .WithMany(p => p.AmistadEmailReciverNavigation)
                     .HasForeignKey(d => d.EmailReciver)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_Amistad_UsuariosReceiver");
 
                 entity.HasOne(d => d.EmailSenderNavigation)

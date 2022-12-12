@@ -15,3 +15,7 @@
 8- update-database -verbose  <- esto hace el update de la base de datos
 9- En controller agregar nuevo elemento con scaffold para cada clase (crea controller MVC con vistas que usan EF y views para el crud(ABM))
 10- Para agregar el enum a la pagina de add.
+
+ELIMINAR UNA IMAGEN
+LINKS NO SE VEN
+IMAGENES MAS CHICAS CAROUSEL

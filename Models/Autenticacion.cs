@@ -30,21 +30,21 @@ namespace RedSocial.Models
             context.Session.SetString("user", "");
             Autenticacion.currentUser = "";
         }
-        public static bool estaAutenticado2(HttpContext context)
+        /*public static bool estaAutenticado2(HttpContext context)
         {
             bool resultado = false;
             if (context.Session.GetString("user") != "") resultado = true;
             return resultado;
-        }
-        public static byte[] stringToByte(String texto)
+        }*/
+        /*public static byte[] stringToByte(String texto)
         {
             byte[] resultado = Encoding.ASCII.GetBytes(texto);
             return resultado;
-        }
-        public static String bytesToString(byte[] bytes)
+        }*/
+        /*public static String bytesToString(byte[] bytes)
         {
             return System.Text.Encoding.Default.GetString(bytes);
-        }
+        }*/
 
         public static bool estaAutenticado()
         {

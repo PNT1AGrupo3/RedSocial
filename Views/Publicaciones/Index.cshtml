@@ -6,62 +6,97 @@
 }
 <h1 class="mimuro">Mis Publicaciones</h1>
 <p>
-    <a asp-action="Create">Publicar</a>
-    <div class="form-group">
-        <input asp-action="Create" value="Create" class="btn btn-primary" />
-    </div>
+<form>
+    <input type="submit" asp-action="Create" value="Publicar" class="btn btn-primary" />
+</form>
+<hr />
 </p>
 <div class="container">
-@{
-int id=0;
-string sId="";
-int i=99;
-foreach (var item in Model) {
-    <div class="row rowCenter">
-    
-        <div class="col-12">
-             @{sId="carousel"+id;}
-             <div id="@sId" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    @{i=0;}
-                    @foreach (var imagen in item.Imagen){
-                            string cClass="";
-                            if (i==0){
-                                cClass="carousel-item active";
-                                }
-                            else
+    @{
+        int id = 0;
+        string sId = "";
+        int i = 99;
+        foreach (var item in Model)
+        {
+            <div class="row rowCenter">
+
+                <div class="col-12">
+                    @{
+                        sId = "carousel" + id;
+                    }
+                    <div id="@sId" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            @{
+                                i = 0;
+                            }
+                            @foreach (var imagen in item.Imagen)
+                            {
+                                string cClass = "";
+                                if (i == 0)
                                 {
-                                    cClass="carousel-item";
+                                    cClass = "carousel-item active";
                                 }
-                                    <div class="@cClass">
-                                        <img class="d-block w-100" src="@imagen.FullPath" alt="@imagen.FullPath">
+                                else
+                                {
+                                    cClass = "carousel-item";
+                                }
+                                <div class="@cClass">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-8 mx-auto">
+                                                <img class="d-block w-100" src="@imagen.FullPath" alt="@imagen.FullPath">
+                                            </div>
+                                        </div>
                                     </div>
+                                </div>
                                 i++;
                             }
+                        </div>
+                        @{
+                            if (item.Imagen.Count > 1)
+                            {
+                                <div class="row">
+                                    <div class="col-6 mx-auto">
+                                        <a class="carousel-control-prev" href="#@sId" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 mx-auto">
+                                        <a class="carousel-control-next" href="#@sId" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
                 </div>
-                <a class="carousel-control-prev" href="#@sId" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#@sId" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>  
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <h5>@item.Fecha</h5>
-        </div>
-        <div class="col-12">
-            <h3>@item.Texto</h3>
-        </div>
-    </div>
-    id++;
-   }
-}
+            </div>
+
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center mx-auto">
+                    <a asp-action="Edit" asp-route-id="@item.PublicacionId">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.PublicacionId">Borrar</a>
+                </div>
+                <div class="col-6 mx-auto">
+                    <h5>@item.Fecha</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 mx-auto">
+                    <h3>@item.Texto</h3>
+                </div>
+            </div>
+            <hr />
+            id++;
+        }
+    }
 </div>
+
 
 
 <!--
@@ -72,71 +107,74 @@ foreach (var item in Model) {
 
 <table class="table">
     <thead>
-       
+
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Fecha)
+@Html.DisplayNameFor(model => model.Fecha)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Texto)
+@Html.DisplayNameFor(model => model.Texto)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Imagen)
+@Html.DisplayNameFor(model => model.Imagen)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.UserEmailNavigation)
+@Html.DisplayNameFor(model => model.UserEmailNavigation)
             </th>
             <th></th>
         </tr>
     </thead>
-        
+
     <tbody>
 @{
-i=0;
-foreach (var item in Model) {
+    i = 0;
+    foreach (var item in Model)
+    {
         <tr>
-            <td>
+                                                                            <td>
                 @Html.DisplayFor(modelItem => item.Fecha)
-            </td>
-            <td>
+                                                                            </td>
+                                                                            <td>
                 @Html.DisplayFor(modelItem => item.Texto)
-            </td>
-            <td>
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    @foreach (var imagen in item.Imagen){
-                            string cClass="";
-                            if (i==0){
-                                cClass="carousel-item active";
-                                }
-                            else
-                                {
-                                    cClass="carousel-item";
-                                }
-                                    <div class="@cClass">
-                                        <img class="d-block w-100" src="@imagen.FullPath" alt="@imagen.FullPath">
-                                    </div>
-                                i++;
+                                                                            </td>
+                                                                            <td>
+                                                                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                                                                <div class="carousel-inner">
+                        @foreach (var imagen in item.Imagen)
+                        {
+                            string cClass = "";
+                            if (i == 0)
+                            {
+                                cClass = "carousel-item active";
                             }
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-            
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.PublicacionId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.PublicacionId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.PublicacionId">Delete</a>
-            </td>
+                            else
+                            {
+                                cClass = "carousel-item";
+                            }
+                                                                                                                                    <div class="@cClass">
+                                                                                                                                        <img class="d-block w-100" src="@imagen.FullPath" alt="@imagen.FullPath">
+                                                                                                                                    </div>
+                            i++;
+                        }
+                                                                                </div>
+                                                                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                                                    <span class="sr-only">Previous</span>
+                                                                                </a>
+                                                                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                                    <span class="sr-only">Next</span>
+                                                                                </a>
+                                                                            </div>
+
+                                                                            </td>
+                                                                            <td>
+                                                                                <a asp-action="Edit" asp-route-id="@item.PublicacionId">Edit</a> |
+                                                                                <a asp-action="Details" asp-route-id="@item.PublicacionId">Details</a> |
+                                                                                <a asp-action="Delete" asp-route-id="@item.PublicacionId">Delete</a>
+                                                                            </td>
         </tr>
-        
+
     }
 }
     </tbody>

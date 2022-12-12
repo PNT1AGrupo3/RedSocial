@@ -167,11 +167,22 @@ body {
         .login input[type="submit"]:focus, .login input[type="button"]:focus {
             border-color: #05a;
         }
+
 img {
-    width: 10px;
-    height: auto
+    
+    height: 480px;
 }
-.d-block w-100 {
-    width: 10px;
-    height: auto
+hr {
+    position: relative;
+    top: 20px;
+    border: none;
+    height: 1px;
+    background: black;
+    margin-bottom: 50px;
+}
+a[href] {
+    color:red;
+}
+a:hover {
+    color:darkviolet;
 }

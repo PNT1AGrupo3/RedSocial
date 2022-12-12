@@ -1,10 +1,10 @@
 ﻿@model RedSocial.Models.Publicacion
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar Publicación";
 }
 
-<h1>Edit</h1>
+<h1>Editar</h1>
 
 <h4>Publicacion</h4>
 <hr />
@@ -14,19 +14,9 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="PublicacionId" />
             <div class="form-group">
-                <label asp-for="Fecha" class="control-label"></label>
-                <input asp-for="Fecha" class="form-control" />
-                <span asp-validation-for="Fecha" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="Texto" class="control-label"></label>
                 <input asp-for="Texto" class="form-control" />
                 <span asp-validation-for="Texto" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UserEmail" class="control-label"></label>
-                <select asp-for="UserEmail" class="form-control" asp-items="ViewBag.UserEmail"></select>
-                <span asp-validation-for="UserEmail" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -36,7 +26,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Volver</a>
 </div>
 
 @section Scripts {

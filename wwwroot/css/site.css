@@ -186,3 +186,10 @@ a[href] {
 a:hover {
     color:darkviolet;
 }
+.fijo {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 10px;
+    right: 10px;
+}

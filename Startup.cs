@@ -33,6 +33,7 @@ namespace RedSocial
             services.AddMvc().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddControllersWithViews();
             services.AddSession();
+            
             //services.AddSingleton(ISingletonService, OperationService)();
             
         }

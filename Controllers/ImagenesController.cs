@@ -22,7 +22,7 @@ namespace RedSocial.Controllers
         public async Task<IActionResult> Index()
         {
             
-            if (!Autenticacion.estaAutenticado())
+            if (!Autenticacion.estaAutenticado(HttpContext))
             {
                 return RedirectToAction("Login", "Usuarios");
             }
@@ -33,7 +33,7 @@ namespace RedSocial.Controllers
         // GET: Imagenes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (!Autenticacion.estaAutenticado())
+            if (!Autenticacion.estaAutenticado(HttpContext))
             {
                 return RedirectToAction("Login", "Usuarios");
             }
@@ -56,7 +56,7 @@ namespace RedSocial.Controllers
         // GET: Imagenes/Create
         public IActionResult Create()
         {
-            if (!Autenticacion.estaAutenticado())
+            if (!Autenticacion.estaAutenticado(HttpContext))
             {
                 return RedirectToAction("Login", "Usuarios");
             }
@@ -71,7 +71,7 @@ namespace RedSocial.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ImagenId,FullPath,PublicacionId")] Imagen imagen)
         {
-            if (!Autenticacion.estaAutenticado())
+            if (!Autenticacion.estaAutenticado(HttpContext))
             {
                 return RedirectToAction("Login", "Usuarios");
             }
@@ -88,7 +88,7 @@ namespace RedSocial.Controllers
         // GET: Imagenes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (!Autenticacion.estaAutenticado())
+            if (!Autenticacion.estaAutenticado(HttpContext))
             {
                 return RedirectToAction("Login", "Usuarios");
             }
@@ -113,7 +113,7 @@ namespace RedSocial.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ImagenId,FullPath,PublicacionId")] Imagen imagen)
         {
-            if (!Autenticacion.estaAutenticado())
+            if (!Autenticacion.estaAutenticado(HttpContext))
             {
                 return RedirectToAction("Login", "Usuarios");
             }
@@ -149,7 +149,7 @@ namespace RedSocial.Controllers
         // GET: Imagenes/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (!Autenticacion.estaAutenticado())
+            if (!Autenticacion.estaAutenticado(HttpContext))
             {
                 return RedirectToAction("Login", "Usuarios");
             }
@@ -174,7 +174,7 @@ namespace RedSocial.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (!Autenticacion.estaAutenticado())
+            if (!Autenticacion.estaAutenticado(HttpContext))
             {
                 return RedirectToAction("Login", "Usuarios");
             }

@@ -60,6 +60,7 @@ namespace RedSocial.Controllers
             {
                 if (usuario.Password == Password)
                 {
+
                     Autenticacion.login(HttpContext, Email);
                     inicioSesion = true;
                 }

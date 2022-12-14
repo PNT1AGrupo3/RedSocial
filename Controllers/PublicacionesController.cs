@@ -26,7 +26,7 @@ namespace RedSocial.Controllers
         // GET: Publicaciones
         public async Task<IActionResult> Index()
         {
-            if (!Autenticacion.estaAutenticado())
+            if (!Autenticacion.estaAutenticado(HttpContext))
             {
                 return RedirectToAction("Login", "Usuarios");
             }
@@ -38,7 +38,7 @@ namespace RedSocial.Controllers
         // GET: Publicaciones/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (!Autenticacion.estaAutenticado())
+            if (!Autenticacion.estaAutenticado(HttpContext))
             {
                 return RedirectToAction("Login", "Usuarios");
             }
@@ -73,11 +73,11 @@ namespace RedSocial.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("PublicacionId,Fecha,Texto,UserEmail")] Publicacion publicacion, List<IFormFile> imagenes)
         {
-            if (!Autenticacion.estaAutenticado())
+            if (!Autenticacion.estaAutenticado(HttpContext))
             {
                 return RedirectToAction("Login", "Usuarios");
             }
-            String user =Autenticacion.getSessionId().ToLower();
+            String user =Autenticacion.getSessionId(HttpContext).ToLower();
             String fileName = "";
             int i = 0;
             if (!this.sonImagenesValidas(imagenes))
@@ -103,8 +103,6 @@ namespace RedSocial.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            //VER QUE HACE ESTO
-            //ViewData["UserEmail"] = new SelectList(_context.Usuario, "Email", "Email", publicacion.UserEmail);
             return View(publicacion);
         }
         private Boolean sonImagenesValidas(List<IFormFile> imagenes)
@@ -161,7 +159,7 @@ namespace RedSocial.Controllers
         public async Task<IActionResult> Edit(int? id)
         {
             
-            if (!Autenticacion.estaAutenticado())
+            if (!Autenticacion.estaAutenticado(HttpContext))
             {
                 return RedirectToAction("Login", "Usuarios");
             }
@@ -188,7 +186,7 @@ namespace RedSocial.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("PublicacionId,Fecha,Texto,UserEmail")] Publicacion publicacion)
         {
-            if (!Autenticacion.estaAutenticado())
+            if (!Autenticacion.estaAutenticado(HttpContext))
             {
                 return RedirectToAction("Login", "Usuarios");
             }
@@ -199,7 +197,7 @@ namespace RedSocial.Controllers
 
             if (ModelState.IsValid)
             {
-                publicacion.UserEmail = Autenticacion.getSessionId();
+                publicacion.UserEmail = Autenticacion.getSessionId(HttpContext);
 
                 publicacion.Fecha = DateTime.Now;
                 try
@@ -230,7 +228,7 @@ namespace RedSocial.Controllers
         // GET: Publicaciones/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (!Autenticacion.estaAutenticado())
+            if (!Autenticacion.estaAutenticado(HttpContext))
             {
                 return RedirectToAction("Login", "Usuarios");
             }
@@ -255,7 +253,7 @@ namespace RedSocial.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (!Autenticacion.estaAutenticado())
+            if (!Autenticacion.estaAutenticado(HttpContext))
             {
                 return RedirectToAction("Login", "Usuarios");
             }
